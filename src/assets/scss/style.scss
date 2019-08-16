@@ -1,0 +1,57 @@
+/****** vars ******/
+$fs-xs: 12px;
+$fs-sm: 15px;
+$fs-md: 20px;
+$fs-lg: 25px;
+$fs-xlg: 30px;
+/****** vars ******/
+*
+{
+    font-family: 'Dosis';
+    box-sizing: border-box;
+}
+body
+{
+}
+
+hr
+{
+    height: 2px;
+    background-color: #ef941a;
+    margin: 10px auto;
+}
+.container
+{
+    width: 96% !important;
+}
+
+
+.mc
+{
+    color: #ef941a;
+}
+
+.mbg
+{
+    background-color: #ef941a;
+}
+
+.vc {
+    display: flex;
+    column-count: 1;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn{
+    background: linear-gradient(to left top, #ff8a1f, #ffd400) !important;
+    color: #fff !important;
+    padding: 10px !important;
+   
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #ef914a;
+        color: #ef914a;
+    }
+}
