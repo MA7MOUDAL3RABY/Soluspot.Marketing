@@ -1,210 +1,163 @@
 <template>
 <section id="SuccessStories">
-    <h3 class="heading text-center mt-5 mb-5">Success Stories</h3>
-    <div id="app">
-        <div class="title-container">
-            <div>
-                <h3 class="title">
-                    Our Projects
-                </h3>
-            </div>
-            <div class="filters">
-                <span class="filter" v-bind:class="{ active: currentFilter === 'ALL' }" @click="setFilter('ALL')">ALL</span>
-                <span class="filter" v-bind:class="{ active: currentFilter === 'ART' }" @click="setFilter('ART')">ART</span>
-                <span class="filter" v-bind:class="{ active: currentFilter === 'WORKSHOPS' }" @click="setFilter('WORKSHOPS')">WORKSHOPS</span>
-                <span class="filter" v-bind:class="{ active: currentFilter === 'FUN' }" @click="setFilter('DOODLES')">DOODLES</span>
-            </div>
-        </div>
-
-        <transition-group class="projects" name="projects">
-            <div class="project" v-if="currentFilter === project.category || currentFilter === 'ALL'">
-                <div v-for="project in projects" v-bind:key="project.title">
-                    <div class="project-image-wrapper">
-                        <img class="project-image" v-bind:src="project.image">
-                        <div class="gradient-overlay"></div>
-                        <div class="circle">
-                            <span class="project-title">{{project.title}}</span>
-                        </div>
-                    </div>
+    <h3 class="SectionTitle text-center mt-5 mb-5">Success Stories</h3>
+    <br /><br />
+    <div class="container">
+        <div uk-filter="target: .js-filter">
+            <v-container grid-list-xl>
+                <v-layout wrap class="uk-subnav uk-subnav-pill">
+                    <v-flex col>
+                        <v-btn class="w-btn w-100" uk-filter-control>All</v-btn>
+                    </v-flex>
+                    <v-flex col>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='WebDesign']">Web Design</v-btn>
+                    </v-flex>
+                    <v-flex col>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='SocialMedia']">Social Media</v-btn>
+                    </v-flex>
+                    <v-flex col>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='Branding']">Branding</v-btn>
+                    </v-flex>
+                    <v-flex col>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='EventOrganization']">Event Organization</v-btn>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+            <br />
+            <div class="js-filter uk-child-width-1-2 uk-child-width-1-3@m uk-text-center" uk-grid uk-lightbox="animation: slide">
+                <div v-for="item in items.slice(0, itemsCount)" :key="item" :data-filter="item.tag">
+                    <a class="uk-inline" :href="item.img" :data-caption="item.name">
+                        <v-img :src="item.img"></v-img>
+                    </a>
                 </div>
             </div>
-        </transition-group>
+        </div>
     </div>
-
+    <v-container>
+        <v-layout wrap class="uk-subnav uk-subnav-pill">
+            <v-spacer></v-spacer>
+            <v-flex md2>
+                <v-btn class="btn w-100" @click="itemsCount+= 3"><span v-if="$vuetify.breakpoint.smAndUp">Show More</span>
+                    <v-icon>mdi-plus</v-icon>
+                </v-btn>
+            </v-flex>
+            <v-flex md2>
+                <v-btn class="btn w-100" @click="itemsCount= 6"><span v-if="$vuetify.breakpoint.smAndUp">Show less</span>
+                    <v-icon>mdi-minus</v-icon>
+                </v-btn>
+            </v-flex>
+            <v-spacer></v-spacer>
+        </v-layout>
+    </v-container>
 </section>
 </template>
 
 <script>
+import mixitup from 'mixitup';
 export default {
     name: 'SuccessStories',
     data() {
         return {
-            currentFilter: 'ALL',
-            projects: [{
-                    title: 'Artwork',
-                    image: 'https://picsum.photos/g/200?image=122',
-                    category: 'ART',
+            items: [{
+                    tag: "WebDesign",
+                    img: require('../../assets/img/Home/SuccessStories/cadcamcim.jpg'),
+                    link: 'link',
+                    name: "Web Design"
                 },
                 {
-                    title: 'Charcoal',
-                    image: 'https://picsum.photos/g/200?image=116',
-                    category: 'ART',
+                    tag: "SocialMedia",
+                    img: require('../../assets/img/Home/SuccessStories/12-1024x612.jpg'),
+                    link: 'link',
+                    name: "Social Media"
                 },
                 {
-                    title: 'Sketching',
-                    image: 'https://picsum.photos/g/200?image=121',
-                    category: 'DOODLES',
+                    tag: "Branding",
+                    img: require('../../assets/img/Home/SuccessStories/IT-BUSINESS-CARD-MOCK-UP-min-1024x576.png'),
+                    link: 'link',
+                    name: "Branding"
                 },
                 {
-                    title: 'Acrillic',
-                    image: 'https://picsum.photos/g/200?image=133',
-                    category: 'WORKSHOPS',
+                    tag: "SocialMedia",
+                    img: require('../../assets/img/Home/SuccessStories/369-1024x612.jpg'),
+                    link: 'link',
+                    name: "Social Media"
                 },
                 {
-                    title: 'Pencil',
-                    image: 'https://picsum.photos/g/200?image=134',
-                    category: 'DOODLES',
+                    tag: "Branding",
+                    img: require('../../assets/img/Home/SuccessStories/MASTER-GOLD-MOCKUP.png'),
+                    link: 'link',
+                    name: "Branding"
                 },
                 {
-                    title: 'Pen',
-                    image: 'https://picsum.photos/g/200?image=115',
-                    category: 'ART',
+                    tag: "SocialMedia",
+                    img: require('../../assets/img/Home/SuccessStories/Lemon-2-1024x612.jpg'),
+                    link: 'link',
+                    name: "Social Media"
                 },
                 {
-                    title: 'Inking',
-                    image: 'https://picsum.photos/g/200',
-                    category: 'WORKSHOPS',
+                    tag: "WebDesign",
+                    img: require('../../assets/img/Home/SuccessStories/Screenshot_1-1024x468.png'),
+                    link: 'link',
+                    name: "WebDesign"
                 },
+                {
+                    tag: "SocialMedia",
+                    img: require('../../assets/img/Home/SuccessStories/15-1024x612.jpg'),
+                    link: 'link',
+                    name: "Social Media"
+                },
+                {
+                    tag: "WebDesign",
+                    img: require('../../assets/img/Home/SuccessStories/tower.jpg'),
+                    link: 'link',
+                    name: "Web Design"
+                },
+                {
+                    tag: "Branding",
+                    img: require('../../assets/img/Home/SuccessStories/DIGITAL-LAB-MOCK-UP-min-1024x655.jpg'),
+                    link: 'link',
+                    name: "Branding"
+                },
+                {
+                    tag: "WebDesign",
+                    img: require('../../assets/img/Home/SuccessStories/coffee.jpg'),
+                    link: 'link',
+                    name: "Web Design"
+                },
+                {
+                    tag: "SocialMedia",
+                    img: require('../../assets/img/Home/SuccessStories/B-080-1024x612.jpg'),
+                    link: 'link',
+                    name: "Social Media"
+                },
+                {
+                    tag: "EventOrganization",
+                    img: require('../../assets/img/Home/SuccessStories/cadcamcimEvent.png'),
+                    link: 'link',
+                    name: "Event Organization"
+                },
+                {
+                    tag: "Branding",
+                    img: require('../../assets/img/Home/SuccessStories/DIGITAL-LAB-1-1-1024x612.png'),
+                    link: 'link',
+                    name: "Branding"
+                },
+                {
+                    tag: "WebDesign",
+                    img: require('../../assets/img/Home/SuccessStories/coffee.jpg'),
+                    link: 'link',
+                    name: "Web Design"
+                }
             ],
-        };
+            itemsCount: 6,
+        }
     },
-    methods: {
-        setFilter(filter) {
-            this.currentFilter = filter;
-        },
-    },
-
-};
+}
 </script>
 
 <style lang="scss" scoped>
 section#SuccessStories {
-    .heading {
-        font-size: 2em;
-    }
-
-    .title-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .title {
-        font-family: 'Dawning of a New Day', cursive;
-        font-size: 30pt;
-        font-weight: normal;
-    }
-
-    .project-title {
-        font-size: 16pt
-    }
-
-    .filter {
-        font-family: arial;
-        padding: 6px 6px;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: all 0.35s;
-    }
-
-    .filter.active {
-        box-shadow: 0px 1px 3px 0px #00000026;
-    }
-
-    .filter:hover {
-        background: lightgray;
-    }
-
-    .projects {
-        margin-bottom: 50px;
-        margin-top: 25px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .projects-enter {
-        transform: scale(0.5) translatey(-80px);
-        opacity: 0;
-    }
-
-    .projects-leave-to {
-        transform: translatey(30px);
-        opacity: 0;
-    }
-
-    .projects-leave-active {
-        position: absolute;
-        z-index: -1;
-    }
-
-    .circle {
-        text-align: center;
-        position: absolute;
-        bottom: -38px;
-        left: 40px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50px;
-        /*  border:1px solid black; */
-        display: flex;
-        box-shadow: 0px -4px 3px 0px #494d3257;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        /*  box-shadow:0px -3px 3px #484848a6; */
-    }
-
-    .project {
-        transition: all .35s ease-in-out;
-        margin: 10px;
-        box-shadow: 0px 2px 8px lightgrey;
-        border-radius: 3px;
-        width: 180px;
-        height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-image-wrapper {
-        position: relative;
-    }
-
-    .gradient-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        opacity: 0.09;
-        background:
-            linear-gradient(to bottom, rgba(0, 210, 247, 0.65) 0%, rgba(0, 210, 247, 0.64) 1%, rgba(0, 0, 0, 0) 100%),
-            linear-gradient(to top, rgba(247, 0, 156, 0.65) 0%, rgba(247, 0, 156, 0.64) 1%, rgba(0, 0, 0, 0) 100%);
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-    }
-
-    .project-image {
-        width: 100%;
-        height: 150px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-    }
+    padding: 2em 0;
+    background-color: #fff
 }
 </style>

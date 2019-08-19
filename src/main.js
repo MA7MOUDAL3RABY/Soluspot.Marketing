@@ -7,8 +7,8 @@ import vuetify from './plugins/vuetify';
 /* ------------- Vue ---------------*/
 
 /* ------------- Loading ---------------*/
-import ElementLoading from 'vue-element-loading'
-Vue.component('loading', ElementLoading)
+import ElementLoading from 'vue-element-loading';
+Vue.component('loading', ElementLoading);
 /* ------------- Loading ---------------*/
 
 /* ------------- Style ---------------*/

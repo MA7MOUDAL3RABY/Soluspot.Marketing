@@ -27,32 +27,32 @@ export default {
     data() {
         return {
             slides: [{
-                    url: require('../../assets/img/slider/eventorganization.png'),
+                    url: require('../../assets/img/Home/Slider/eventorganization.png'),
                     alt: 'Event organization',
                     txt: 'Event organization',
                 },
                 {
-                    url: require('../../assets/img/slider/chatbot.png'),
+                    url: require('../../assets/img/Home/Slider/chatbot.png'),
                     alt: 'chatbot',
                     txt: 'chatbot',
                 },
                 {
-                    url: require('../../assets/img/slider/strategicMarketing.png'),
+                    url: require('../../assets/img/Home/Slider/strategicMarketing.png'),
                     alt: 'strategic Marketing',
                     txt: 'strategic Marketing',
                 },
                 {
-                    url: require('../../assets/img/slider/DigitalMarketing.png'),
+                    url: require('../../assets/img/Home/Slider/DigitalMarketing.png'),
                     alt: 'Digital Marketing',
                     txt: 'Digital Marketing',
                 },
                 {
-                    url: require('../../assets/img/slider/Branding.png'),
+                    url: require('../../assets/img/Home/Slider/Branding.png'),
                     alt: 'Branding',
                     txt: 'Branding',
                 },
                 {
-                    url: require('../../assets/img/slider/webDesign.png'),
+                    url: require('../../assets/img/Home/Slider/webDesign.png'),
                     alt: 'Web Design & Development',
                     txt: 'Web Design',
                 },

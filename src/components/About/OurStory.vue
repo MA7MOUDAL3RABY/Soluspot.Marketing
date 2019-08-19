@@ -4,7 +4,7 @@
         <div class="container">
             <v-layout wrap>
                 <v-flex  style="padding-top: 10%" md6 xs12>
-                    <h3 class="heading">
+                    <h3 class="SectionTitle">
                         Our Story
                     </h3>
                     <hr>
@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
 section#OurStory {
 
-        .heading {
+        .SectionTitle {
             font-size: 2em;
             text-align: left;
             color: #ef941a;

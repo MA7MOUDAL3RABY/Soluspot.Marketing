@@ -48,10 +48,10 @@
                 <v-icon>mdi-home</v-icon> Home
             </router-link>
             <router-link class="router-link" to="/About">
-                <v-icon>mdi-library</v-icon> About
+                <v-icon>mdi-account</v-icon> About
             </router-link>
             <router-link class="router-link" to="/Services">
-                <v-icon>mdi-room-service</v-icon> Services
+                <v-icon>mdi-library</v-icon> Services
             </router-link>
             <router-link class="router-link" to="/Blog">
                 <v-icon>mdi-script-text-outline</v-icon> Blog

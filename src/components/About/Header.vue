@@ -4,7 +4,7 @@
         <v-container grid-list-xl>
             <v-layout wrap>
                 <v-flex md6 xl12>
-                    <div class="heading">
+                    <div class="SectionTitle">
                         <p>About <span class="mc">Us</span></p>
                     </div>
                 </v-flex>
@@ -32,7 +32,7 @@ section#About-header {
         background-size: cover;
         height: 90vh;
 
-        .heading {
+        .SectionTitle {
             display: flex;
             font-size: 4em;
             height: 100%;

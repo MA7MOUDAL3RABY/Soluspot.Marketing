@@ -9,7 +9,7 @@
                 </v-flex>
                 <v-spacer></v-spacer>
                 <v-flex style="padding-top: 10%" order-xs1 order-sm2 md6 xs12>
-                    <h3 class="heading">
+                    <h3 class="SectionTitle">
                         Why Soluspot
                     </h3>
                     <hr>
@@ -40,7 +40,7 @@ export default {
 <style lang="scss">
 section#Whyus {
 
-    .heading {
+    .SectionTitle {
         font-size: 2em;
         text-align: left;
         color: #ef941a;

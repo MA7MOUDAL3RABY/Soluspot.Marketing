@@ -3,6 +3,7 @@
     <Slider/>
     <OurServices/>
     <SuccessStories/>
+    <SuccessPartners/>
 </section>
 </template>
 
@@ -10,6 +11,7 @@
 import Slider from '@/components/Home/Slider.vue';
 import OurServices from '@/components/Home/OurServices.vue';
 import SuccessStories from '@/components/Home/SuccessStories.vue';
+import SuccessPartners from '@/components/Home/SuccessPartners.vue';
 
 export default {
   name: 'Home',
@@ -17,6 +19,7 @@ export default {
     Slider,
     OurServices,
     SuccessStories,
+    SuccessPartners,
   },
 };
 </script>

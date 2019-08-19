@@ -5,13 +5,15 @@ $fs-md: 20px;
 $fs-lg: 25px;
 $fs-xlg: 30px;
 /****** vars ******/
+@import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand&display=swap');
 *
 {
-    font-family: 'Dosis';
+    font-family: 'Quicksand', 'dosis';
     box-sizing: border-box;
 }
 body
 {
+    background-color: #fff;
 }
 
 hr
@@ -23,9 +25,13 @@ hr
 .container
 {
     width: 96% !important;
+    margin: 0 auto !important;
 }
+.w-100
 
-
+{
+    width: 100% !important;
+}
 .mc
 {
     color: #ef941a;
@@ -44,6 +50,25 @@ hr
 
 }
 
+.w-btn
+{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 17px;
+
+}
+.w-btn.uk-active
+{
+    background: linear-gradient(to top left, #ff8a1f, #ffd400) !important;
+    color: #fff !important;
+    font-weight: 900;
+    
+    &:hover
+    {
+        box-shadow: none;
+    }
+}
 .btn{
     background: linear-gradient(to left top, #ff8a1f, #ffd400) !important;
     color: #fff !important;
@@ -54,4 +79,9 @@ hr
         border: 1px solid #ef914a;
         color: #ef914a;
     }
+}
+.SectionTitle
+{
+    font-size: 2em;
+    font-weight: bold;
 }
