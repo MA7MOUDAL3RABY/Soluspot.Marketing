@@ -5,12 +5,37 @@ $fs-md: 20px;
 $fs-lg: 25px;
 $fs-xlg: 30px;
 /****** vars ******/
+::selection{
+    color: #191919;
+    background: #ff8a1f8f;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand&display=swap');
 *
 {
     font-family: 'Quicksand', 'dosis';
     box-sizing: border-box;
+
+    &::-webkit-scrollbar{
+        background-color: #191919;
+        width: 13px;
+    }
+    &::-webkit-scrollbar-button
+    {
+        display: none;
+    }
+    &::-webkit-scrollbar-corner
+    {
+        background-color: #ef941a;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: #ff8a1f;
+        border-radius: 5px;
+    }
 }
+
+
 body
 {
     background-color: #fff;
@@ -84,4 +109,5 @@ hr
 {
     font-size: 2em;
     font-weight: bold;
+    text-align: center;
 }

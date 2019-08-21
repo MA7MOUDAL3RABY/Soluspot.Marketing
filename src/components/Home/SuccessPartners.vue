@@ -28,6 +28,18 @@ export default {
                     alt: 'Event organization',
                 },
                 {
+                    ImgURL: require('../../assets/img/Home/SuccessPartners/logoCherry.jpg'),
+                    alt: 'Event organization',
+                },
+                {
+                    ImgURL: require('../../assets/img/Home/SuccessPartners/logoCadcamcim.jpg'),
+                    alt: 'Event organization',
+                },
+                {
+                    ImgURL: require('../../assets/img/Home/SuccessPartners/FAMILY-CLINIC.png'),
+                    alt: 'Event organization',
+                },
+                {
                     ImgURL: require('../../assets/img/Home/SuccessPartners/logoDA.jpg'),
                     alt: 'Event organization',
                 },
@@ -69,6 +81,10 @@ export default {
                 },
                 {
                     ImgURL: require('../../assets/img/Home/SuccessPartners/TOWER.png'),
+                    alt: 'Event organization',
+                },
+                {
+                    ImgURL: require('../../assets/img/Home/SuccessPartners/COFFEE-LOGO.png'),
                     alt: 'Event organization',
                 },
             ],
