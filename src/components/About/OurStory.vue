@@ -3,7 +3,7 @@
     <v-container grid-list-{xs through xl}>
         <div class="container">
             <v-layout wrap>
-                <v-flex  style="padding-top: 10%" md6 xs12>
+                <v-flex style="padding-top: 10%" text-right md6 xs12>
                     <h3 class="SectionTitle">
                         Our Story
                     </h3>
@@ -41,18 +41,17 @@ export default {
 <style lang="scss">
 section#OurStory {
 
-        .SectionTitle {
-            font-size: 2em;
-            text-align: left;
-            color: #ef941a;
-            font-weight: bold;
+    .SectionTitle {
+        font-size: 2em;
+        color: #ef941a;
+        font-weight: bold;
 
-            @media (max-width: 576px) {
-                text-align: center;
-
-            }
+        @media (max-width: 576px) {
+            text-align: center;
 
         }
+
+    }
 
 }
 </style>

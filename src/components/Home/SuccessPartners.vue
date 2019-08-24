@@ -1,5 +1,5 @@
 <template>
-<section id="SuccessPartner">
+<section id="SuccessPartner" dir="ltr">
     <h3 class="SectionTitle text-center mt-5 mb-5">Success Partner</h3>
     <br />
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>

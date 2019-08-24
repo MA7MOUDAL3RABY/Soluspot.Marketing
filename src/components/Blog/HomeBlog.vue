@@ -1,5 +1,5 @@
 <template>
-<section id="HomeBlog" class="HomeBlog">
+<section id="HomeBlog" class="HomeBlog" dir="ltr">
     <h3 class="SectionTitle">Blog</h3>
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <div class="container">

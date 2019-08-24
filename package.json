@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/lang/**/*.json'",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -16,12 +17,16 @@
     "vee-validate": "^2.2.15",
     "vue": "^2.6.10",
     "vue-element-loading": "^1.1.5",
+    "vue-flag-icon": "^1.0.6",
+    "vue-i18n": "^8.0.0",
     "vue-router": "^3.0.3",
+    "vue-svg-transition": "^0.2.1",
     "vuetify": "^2.0.0",
     "vuex": "^3.0.1",
     "vuikit": "^0.8.10"
   },
   "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-plugin-unit-jest": "^3.10.0",
@@ -36,7 +41,9 @@
     "node-sass": "^4.9.0",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
+    "vue-cli-plugin-i18n": "^0.6.0",
     "vue-cli-plugin-vuetify": "^0.6.1",
+    "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.2.2"
   },

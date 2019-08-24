@@ -1,0 +1,47 @@
+{
+  "dir": "ltr",
+  "rtl": "false",
+  "message": "hello en i18n !!",
+  "slider": {
+    "Branding": "branding",
+    "EventOrganization": "Event Organization",
+    "WebDesign": "Web Design",
+    "Chatbot": "Chatbot",
+    "StrategicMarketing": "strategicMarketing",
+    "DigitalMarketing": "Digital Marketing"
+  },
+  "Navbar": {
+    "Home": "Home",
+    "About": "About",
+    "Services": "Services",
+    "Blog": "Blog",
+    "ContactUs": "ContactUs"
+  },
+  "OurServices": {
+    "title": "Our Integrated Services",
+    "Branding": {
+      "title": "Branding",
+      "desc": "Ensure your brand awareness and business growth"
+    },
+    "DigitalMarketing": {
+      "title": "Digital Marketing & Advertising​",
+      "desc": "Ensure your business is set-up for digital success"
+    },
+    "WebBased": {
+      "title": "Web-Based Services",
+      "desc": "Allow your business to select different web functions"
+    },
+    "ContentCreation": {
+      "title": "Content Creation",
+      "desc": "Event Represents Your Significant Investment, And We’ll Make Sure Yours Pays Off."
+    },
+    "EventOrganization": {
+      "title": "Event Organization",
+      "desc": "The best-practice approach to marketing"
+    },
+    "SeoServices​": {
+      "title": "SEO Services​",
+      "desc": "GET FOUND & drive qualified traffic to your website"
+    }
+  }
+}

@@ -10,11 +10,12 @@ $fs-xlg: 30px;
     background: #ff8a1f8f;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cairo|Dosis&display=swap&subset=arabic');
 *
 {
-    font-family: 'Quicksand', 'dosis';
+    font-family: 'Cairo', 'Dosis' !important;
     box-sizing: border-box;
+    letter-spacing: normal;
 
     &::-webkit-scrollbar{
         background-color: #191919;
@@ -98,6 +99,7 @@ hr
     background: linear-gradient(to left top, #ff8a1f, #ffd400) !important;
     color: #fff !important;
     padding: 10px !important;
+    text-decoration: none;
    
     &:hover{
         background-color: transparent;
@@ -110,4 +112,30 @@ hr
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+}
+
+select.select {
+    option {
+        padding: 5px !important;
+        width: 100%;
+    }
+}
+
+.s-langSwitch {
+    select {
+        appearance: menulist-button !important;
+        background-color: #232222;
+        width: 100%;
+        padding: 5px 25px;
+        margin: 0 0 15px 0; 
+        color: #fff;
+
+        option {
+            padding: 2px !important;
+            background-color: #232222;
+            width: 100%;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
 }

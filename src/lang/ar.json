@@ -1,0 +1,47 @@
+{
+  "dir": "rtl",
+  "rtl": "true",
+  "message": "hello ar i18n !!",
+  "slider": {
+    "Branding": "هويات",
+    "EventOrganization": "تنظيم الأحداث",
+    "WebDesign": "تصميم  المواقع",
+    "Chatbot": "بوت دردشه",
+    "StrategicMarketing": "استراتجيات التسويق",
+    "DigitalMarketing": "التسويف الرقمي"
+  },
+  "Navbar": {
+    "Home" : "الرئيسية",
+    "About" : "من  نحن",
+    "Services" : "الحدمات",
+    "Blog" : "المدونة",
+    "ContactUs" : "اتصل بنا"
+  },
+  "OurServices": {
+    "title": "خدماتنا المتكاملة",
+    "Branding": {
+      "title": "العلامات التجارية",
+      "desc": "ضمان الوعي بالعلامة التجاريه الخاصة بك ونمو الاعمال"
+    },
+    "DigitalMarketing": {
+      "title": "التسويف الرقمي والأعلان",
+      "desc": "تأكد من اعداد عملك للنجاح الرقمي"
+    },
+    "WebBased": {
+      "title": "خدمات الويب",
+      "desc": "اسمح لعملك بمزامنة وظائف مختلفه"
+    },
+    "ContentCreation": {
+      "title": "إنشاء المحتوى",
+      "desc": "يمثل الحدث استثماراً كبيراً وسنتأكد من قيامك بالدفع"
+    },
+    "EventOrganization": {
+      "title": "تنظيم الحدث",
+      "desc": "نهج أفضل الممارسات ف التسويق"
+    },
+    "SeoServices​": {
+      "title": "خدمات SEO",
+      "desc": "احصل علي قيادة وتحكم لحركة المرور على موقعك"
+    }
+  }
+}

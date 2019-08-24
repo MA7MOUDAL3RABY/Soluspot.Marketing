@@ -1,24 +1,52 @@
 /* ------------- Vue ---------------*/
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import vuetify from './plugins/vuetify';
-/* ------------- Vue ---------------*/
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+/* --------------- Vue ---------------*/
 
-/* ------------- Loading ---------------*/
-import ElementLoading from 'vue-element-loading';
-Vue.component('loading', ElementLoading);
-/* ------------- Loading ---------------*/
+/* --------------- Vuetify ---------------*/
+import vuetify from "./plugins/vuetify";
+/* --------------- Vuetify ---------------*/
 
-/* ------------- Style ---------------*/
-import './assets/scss/style.scss';
-/* ------------- Style ---------------*/
+/* --------------- i18n ---------------*/
+import i18n from "./i18n";
+Vue.use(i18n);
+/* --------------- i18n ---------------*/
+
+/* --------------- Flag ---------------*/
+import FlagIcon from "vue-flag-icon";
+Vue.use(FlagIcon);
+/* --------------- Flag ---------------*/
+
+/* --------------- Style ---------------*/
+import "./assets/scss/style.scss";
+/* --------------- Style ---------------*/
+
 Vue.config.productionTip = false;
 
+router.beforeEach((to, from, next) => {
+    let lang = to.params.lang;
+    if (!lang) {
+        lang = "en";
+    }
+    i18n.locale = lang;
+    next();
+});
+
 new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App),
-}).$mount('#app');
+    data() {
+        return {
+           
+            rtl: i18n.locale == "ar" ? true : false
+        };
+    },
+    created() {
+        this.$vuetify.rtl = this.rtl;
+    },
+    router,
+    store,
+    vuetify,
+    i18n,
+    render: h => h(App)
+}).$mount("#app");

@@ -9,29 +9,32 @@
             <template v-if="$vuetify.breakpoint.mdAndUp">
                 <v-toolbar-items>
                     <v-btn text>
-                        <router-link active-class="active" class="router-link" to="/">
-                            <v-icon>mdi-home</v-icon> Home
+                        <router-link active-class="active" class="router-link" :to="`/${$i18n.locale}`">
+                            <v-icon>mdi-home</v-icon> {{ $t('Navbar.Home') }}
                         </router-link>
                     </v-btn>
                     <v-btn text>
-                        <router-link active-class="active" class="router-link" to="/About">
-                            <v-icon>mdi-account</v-icon> About
+                        <router-link active-class="active" class="router-link" :to="`/${$i18n.locale}/About`">
+                            <v-icon>mdi-account</v-icon>{{ $t('Navbar.About') }}
                         </router-link>
                     </v-btn>
                     <v-btn text>
-                        <router-link active-class="active" class="router-link" to="/Services">
-                            <v-icon>mdi-library</v-icon> Services
+                        <router-link active-class="active" class="router-link" :to="`/${$i18n.locale}/Services`">
+                            <v-icon>mdi-library</v-icon> {{ $t('Navbar.Services') }}
                         </router-link>
                     </v-btn>
                     <v-btn text>
-                        <router-link active-class="active" class="router-link" to="/Blog">
-                            <v-icon>mdi-script-text-outline</v-icon> Blog
+                        <router-link active-class="active" class="router-link" :to="`/${$i18n.locale}/Blog`">
+                            <v-icon>mdi-script-text-outline</v-icon> {{ $t('Navbar.Blog') }}
                         </router-link>
                     </v-btn>
                     <v-btn text>
-                        <router-link active-class="active" class="router-link" to="/ContactUs">
-                            <v-icon>mdi-phone</v-icon> Contact Us
+                        <router-link active-class="active" class="router-link" :to="`/${$i18n.locale}/ContactUs`">
+                            <v-icon>mdi-phone</v-icon> {{ $t('Navbar.ContactUs') }}
                         </router-link>
+                    </v-btn>
+                    <v-btn text>
+                        <LangSwitcher />
                     </v-btn>
                 </v-toolbar-items>
             </template>
@@ -43,34 +46,42 @@
     <template v-if="$vuetify.breakpoint.smAndDown">
         <v-navigation-drawer app v-model="drawer" class="indigo sideMenu">
             <v-img id="logo" src="@/assets/img/logo.png" />
+            <div class="w-100 s-langSwitch float-right">
+                <LangSwitcher />
+            </div>
+            <router-link class="router-link" :to="`/${$i18n.locale}`">
+                <v-icon>mdi-home</v-icon> {{ $t('Navbar.Home') }}
+            </router-link>
+            <router-link class="router-link" :to="`/${$i18n.locale}/About`">
+                <v-icon>mdi-account</v-icon> {{ $t('Navbar.About') }}
+            </router-link>
+            <router-link class="router-link" :to="`/${$i18n.locale}/Services`">
+                <v-icon>mdi-library</v-icon> {{ $t('Navbar.Services') }}
+            </router-link>
+            <router-link class="router-link" :to="`/${$i18n.locale}/Blog`">
+                <v-icon>mdi-script-text-outline</v-icon> {{ $t('Navbar.Blog') }}
+            </router-link>
+            <router-link class="router-link" :to="`/${$i18n.locale}/ContactUs`">
+                <v-icon>mdi-phone</v-icon> {{ $t('Navbar.ContactUs') }}
+            </router-link>
 
-            <router-link class="router-link" to="/">
-                <v-icon>mdi-home</v-icon> Home
-            </router-link>
-            <router-link class="router-link" to="/About">
-                <v-icon>mdi-account</v-icon> About
-            </router-link>
-            <router-link class="router-link" to="/Services">
-                <v-icon>mdi-library</v-icon> Services
-            </router-link>
-            <router-link class="router-link" to="/Blog">
-                <v-icon>mdi-script-text-outline</v-icon> Blog
-            </router-link>
-            <router-link class="router-link" to="/ContactUs">
-                <v-icon>mdi-phone</v-icon> Contact Us
-            </router-link>
         </v-navigation-drawer>
     </template>
 </nav>
 </template>
 
 <script>
+import LangSwitcher from './LangSwitcher';
 export default {
-  data() {
-    return {
-      drawer: false,
-    };
-  },
+    name: 'navbar',
+    components: {
+        LangSwitcher,
+    },
+    data() {
+        return {
+            drawer: false,
+        };
+    },
 };
 </script>
 
@@ -79,6 +90,7 @@ export default {
     position: sticky;
     top: 0;
     z-index: 9999;
+
     #logo {
         width: 135px;
     }
@@ -110,13 +122,12 @@ export default {
 
     .sideMenu {
         padding: 0;
-        background-color: #dcdde1 !important;
-        border-color: #ef941a !important;
+        background-color: #161616 !important;
 
         #logo {
-            width: 100%;
-            margin-bottom: 1cm;
-            box-shadow: 0 0 4px 2px #0000007f;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 10px;
 
             .v-image__image {
                 background-size: 75% auto;
@@ -124,7 +135,8 @@ export default {
         }
 
         .router-link {
-            color: #000;
+            color: #fff;
+            font-weight: bold;
             display: block;
             margin: 20px 20px;
             text-indent: 5px;
@@ -144,5 +156,7 @@ export default {
         }
 
     }
+
+ 
 }
 </style>

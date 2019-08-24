@@ -1,14 +1,14 @@
 <template>
 <section id="OurServices">
     <div class="bg-container">
-        <h3 class="SectionTitle text-center mt-5 mb-5">Our Integrated Services</h3>
+        <h3 class="SectionTitle text-center mt-5 mb-5">{{ $t('OurServices.title') }}</h3>
         <v-container grid-list-md>
             <v-layout wrap align-content-space-around>
-                <v-flex md4 xs12 v-for="card in OurServicesCard" :key="card">
+                <v-flex md4 xs12 v-for="card in Cards" :key="card">
                     <v-card class="card mx-auto text-center ">
                         <v-img class="card-img" width="100px" height="100px" :src="card.CardImg"> </v-img>
-                        <v-card-title class="CardTitle fill-height">{{ card.CardTitle }}</v-card-title>
-                        <v-card-text class="CardDisc"> {{ card.CardDisc }}</v-card-text>
+                        <v-card-title class="CardTitle fill-height">{{ $t(card.CardTitle) }}</v-card-title>
+                        <v-card-text class="CardDisc"> {{ $t(card.CardDisc) }} </v-card-text>
                     </v-card>
                 </v-flex>
             </v-layout>
@@ -22,40 +22,40 @@ export default {
     name: 'OurServices',
     data() {
         return {
-            OurServicesCard: [{
+            Cards: [{
                     CardImg: require('../../assets/img/Home/OurServicesCards/Brandingpng.png'),
-                    CardTitle: 'Branding',
-                    CardDisc: 'Ensure your brand awareness and business growth',
+                    CardTitle: 'OurServices.Branding.title',
+                    CardDisc: 'OurServices.Branding.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Marketing.png'),
-                    CardTitle: 'Digital Marketing & Advertising​',
-                    CardDisc: 'Ensure your business is set-up for digital success',
+                    CardTitle: 'OurServices.DigitalMarketing.title',
+                    CardDisc: 'OurServices.DigitalMarketing.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Chatbot.png'),
-                    CardTitle: 'Web-Based Services',
-                    CardDisc: 'Allow your business to select different web functions',
+                    CardTitle: 'OurServices.WebBased.title',
+                    CardDisc: 'OurServices.WebBased.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Content.png'),
-                    CardTitle: 'Content Creation',
-                    CardDisc: 'The best-practice approach to marketing',
+                    CardTitle: 'OurServices.ContentCreation.title',
+                    CardDisc: 'OurServices.ContentCreation.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Even.png'),
-                    CardTitle: 'Event Organization',
-                    CardDisc: 'Event Represents Your Significant Investment, And We’ll Make Sure Yours Pays Off.',
+                    CardTitle: 'OurServices.EventOrganization.title',
+                    CardDisc: 'OurServices.EventOrganization.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/SEO.png'),
-                    CardTitle: 'SEO SERVICES​',
-                    CardDisc: 'GET FOUND & drive qualified traffic to your website',
+                    CardTitle: 'OurServices.SeoServices​.title',
+                    CardDisc: 'OurServices.SeoServices​.desc',
 
                 },
             ],
