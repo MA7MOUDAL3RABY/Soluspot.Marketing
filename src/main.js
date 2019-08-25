@@ -38,7 +38,7 @@ new Vue({
     data() {
         return {
            
-            rtl: i18n.locale == "ar" ? true : false
+            rtl: $t('rtl')
         };
     },
     created() {

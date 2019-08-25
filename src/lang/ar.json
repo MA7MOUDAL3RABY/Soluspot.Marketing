@@ -3,10 +3,10 @@
   "rtl": "true",
   "message": "hello ar i18n !!",
   "slider": {
-    "Branding": "هويات",
+    "Branding": "العلامات التجارية",
     "EventOrganization": "تنظيم الأحداث",
     "WebDesign": "تصميم  المواقع",
-    "Chatbot": "بوت دردشه",
+    "Chatbot": "المساعد الألي",
     "StrategicMarketing": "استراتجيات التسويق",
     "DigitalMarketing": "التسويف الرقمي"
   },
