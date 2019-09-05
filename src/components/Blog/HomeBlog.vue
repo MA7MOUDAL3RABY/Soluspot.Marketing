@@ -1,6 +1,6 @@
 <template>
 <section id="HomeBlog" class="HomeBlog" dir="ltr">
-    <h3 class="SectionTitle">Blog</h3>
+    <h3 class="SectionTitle">{{ $t('Home.Blog.title')}}</h3>
     <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider>
         <div class="container">
             <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-3@m">

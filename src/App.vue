@@ -18,5 +18,6 @@ export default {
         Navbar,
         i18n,
     },
+    
 };
 </script>

@@ -34,11 +34,11 @@ router.beforeEach((to, from, next) => {
     next();
 });
 
+
 new Vue({
     data() {
         return {
-           
-            rtl: $t('rtl')
+            rtl: i18n.locale == "ar" ? true : false
         };
     },
     created() {

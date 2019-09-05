@@ -1,15 +1,15 @@
 <template>
-<section id="About-header">
+<section id="About-header" :dir="$t('dir')">
     <header id="header">
         <v-container grid-list-xl>
             <v-layout wrap>
                 <v-flex md6 xl12>
                     <div class="SectionTitle">
-                        <p>About <span class="mc">Us</span></p>
+                        <p v-html="$t('AboutUs.Title')"></p>
                     </div>
                 </v-flex>
                 <v-flex md6 xl12>
-                    <V-img :src="require('../../assets/img/About/header-About.png')"></V-img>
+                    <V-img width="90%" :src="require('../../assets/img/About/header-About.png')"></V-img>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -30,7 +30,7 @@ section#About-header {
 
         background-image: url('../../assets/img/curve-bg.png');
         background-size: cover;
-        height: 90vh;
+        height: 100vh;
 
         .SectionTitle {
             display: flex;

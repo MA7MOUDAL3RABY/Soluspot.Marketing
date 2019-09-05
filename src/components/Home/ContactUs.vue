@@ -1,27 +1,27 @@
 <template>
-<section id="ContactUs">
-    <h3 class="SectionTitle text-center mt-5 mb-5">Contact Us</h3>
+<section id="ContactUs" :dir="$t('dir')" >
+    <h3 class="SectionTitle text-center mt-5 mb-5">{{ $t('Home.ContactUS.title') }}</h3>
     <v-container grid-list-md>
         <v-layout wrap align-content-space-around>
             <v-flex md6 xs12>
 
                 <v-card>
-                    <v-tabs class="text-left" vertical grow text-left>
+                    <v-tabs class="text-left" vertical="false" grow text-left>
                         <v-tab>
                             <v-icon left>mdi-phone</v-icon>
-                            Phone
+                            {{$t('Home.ContactUS.Form.label.Mobile')}}
                         </v-tab>
                         <v-tab>
                             <v-icon left>mdi-map-marker</v-icon>
-                            Address
+                        {{$t('Home.ContactUS.Form.label.Address')}}
                         </v-tab>
                         <v-tab>
                             <v-icon left>mdi-email</v-icon>
-                            Email
+                        {{$t('Home.ContactUS.Form.label.Email')}}
                         </v-tab>
                         <v-tab>
                             <v-icon left>mdi-web</v-icon>
-                            Social Media
+                        {{$t('Home.ContactUS.Form.label.SocialMedia')}}
                         </v-tab>
 
                         <v-tab-item>
@@ -99,6 +99,7 @@ export default {
         ContactUsForm,
         SocialLinks,
     },
+  
 
 };
 </script>

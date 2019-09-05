@@ -1,5 +1,5 @@
 <template>
-<section id="slider">
+<section id="slider" :dir="$t('dir')">
     <template>
         <v-carousel cycle height="100vh" hide-delimiters show-arrows-on-hover>
             <v-carousel-item class="slideItem" v-for="slide in slides" :key="slide">
@@ -7,7 +7,7 @@
                     <v-container grid-list-xl text-center>
                         <v-layout fill-height wrap>
                             <v-flex xs12 sm6 md6 justify-center>
-                                <div class="sliderTxt display-3 mt-5 mb-2 text-center">{{ $t('slider.' + slide.txt) }} </div>
+                                <div class="sliderTxt display-3 mt-5 mb-2 text-center">{{ $t('Home.slider.' + slide.txt) }} </div>
                             </v-flex>
                             <v-flex xs12 sm6 md6>
                                 <v-img class="sliderImg" :src="slide.url"></v-img>

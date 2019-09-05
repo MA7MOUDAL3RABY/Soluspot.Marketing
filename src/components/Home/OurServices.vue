@@ -1,7 +1,7 @@
 <template>
-<section id="OurServices">
+<section id="OurServices" :dir="$t('dir')">
     <div class="bg-container">
-        <h3 class="SectionTitle text-center mt-5 mb-5">{{ $t('OurServices.title') }}</h3>
+        <h3 class="SectionTitle text-center mt-5 mb-5">{{ $t('Home.OurServices.title') }}</h3>
         <v-container grid-list-md>
             <v-layout wrap align-content-space-around>
                 <v-flex md4 xs12 v-for="card in Cards" :key="card">
@@ -24,38 +24,38 @@ export default {
         return {
             Cards: [{
                     CardImg: require('../../assets/img/Home/OurServicesCards/Brandingpng.png'),
-                    CardTitle: 'OurServices.Branding.title',
-                    CardDisc: 'OurServices.Branding.desc',
+                    CardTitle: 'Home.OurServices.Branding.title',
+                    CardDisc: 'Home.OurServices.Branding.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Marketing.png'),
-                    CardTitle: 'OurServices.DigitalMarketing.title',
-                    CardDisc: 'OurServices.DigitalMarketing.desc',
+                    CardTitle: 'Home.OurServices.DigitalMarketing.title',
+                    CardDisc: 'Home.OurServices.DigitalMarketing.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Chatbot.png'),
-                    CardTitle: 'OurServices.WebBased.title',
-                    CardDisc: 'OurServices.WebBased.desc',
+                    CardTitle: 'Home.OurServices.WebBased.title',
+                    CardDisc: 'Home.OurServices.WebBased.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Content.png'),
-                    CardTitle: 'OurServices.ContentCreation.title',
-                    CardDisc: 'OurServices.ContentCreation.desc',
+                    CardTitle: 'Home.OurServices.ContentCreation.title',
+                    CardDisc: 'Home.OurServices.ContentCreation.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/Even.png'),
-                    CardTitle: 'OurServices.EventOrganization.title',
-                    CardDisc: 'OurServices.EventOrganization.desc',
+                    CardTitle: 'Home.OurServices.EventOrganization.title',
+                    CardDisc: 'Home.OurServices.EventOrganization.desc',
 
                 },
                 {
                     CardImg: require('../../assets/img/Home/OurServicesCards/SEO.png'),
-                    CardTitle: 'OurServices.SeoServices​.title',
-                    CardDisc: 'OurServices.SeoServices​.desc',
+                    CardTitle: 'Home.OurServices.SeoServices​.title',
+                    CardDisc: 'Home.OurServices.SeoServices​.desc',
 
                 },
             ],

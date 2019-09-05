@@ -1,5 +1,5 @@
 <template>
-<nav id="Navbar">
+<nav id="Navbar" :dir="$t('dir')">
     <vue-app>
         <v-toolbar>
             <v-toolbar-title>
@@ -45,7 +45,6 @@
     </vue-app>
     <template v-if="$vuetify.breakpoint.smAndDown">
         <v-navigation-drawer app v-model="drawer" class="indigo sideMenu">
-            <v-img id="logo" src="@/assets/img/logo.png" />
             <div class="w-100 s-langSwitch float-right">
                 <LangSwitcher />
             </div>
@@ -124,21 +123,11 @@ export default {
         padding: 0;
         background-color: #161616 !important;
 
-        #logo {
-            width: 70%;
-            margin: 0 auto;
-            margin-bottom: 10px;
-
-            .v-image__image {
-                background-size: 75% auto;
-            }
-        }
-
         .router-link {
             color: #fff;
             font-weight: bold;
             display: block;
-            margin: 20px 20px;
+            margin: 30px 20px;
             text-indent: 5px;
 
             &:hover {

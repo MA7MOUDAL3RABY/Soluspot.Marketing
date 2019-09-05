@@ -3,17 +3,18 @@ import Vuetify from "vuetify/lib";
 
 Vue.use(Vuetify);
 
-export default new Vuetify({
-    //  function() {
-    //     let locale = VueCookie.get("locale");
-    //     if (locale === "ar") {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // },
-    
+export default new Vuetify({ 
     icons: {
         iconfont: "mdi"
-    }
+    },
+    theme: {
+        themes: {
+          light: {
+            primary: '#ef941a',
+            secondary: '#ef941a',
+            accent: '#ef941a',
+            error: '#ef941a',
+          },
+        },
+      },
 });

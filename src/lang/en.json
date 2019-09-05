@@ -2,14 +2,7 @@
   "dir": "ltr",
   "rtl": "false",
   "message": "hello en i18n !!",
-  "slider": {
-    "Branding": "branding",
-    "EventOrganization": "Event Organization",
-    "WebDesign": "Web Design",
-    "Chatbot": "Chatbot",
-    "StrategicMarketing": "strategicMarketing",
-    "DigitalMarketing": "Digital Marketing"
-  },
+
   "Navbar": {
     "Home": "Home",
     "About": "About",
@@ -17,31 +10,97 @@
     "Blog": "Blog",
     "ContactUs": "ContactUs"
   },
-  "OurServices": {
-    "title": "Our Integrated Services",
-    "Branding": {
-      "title": "Branding",
-      "desc": "Ensure your brand awareness and business growth"
+  "Home": {
+    "slider": {
+      "Branding": "branding",
+      "EventOrganization": "Event Organization",
+      "WebDesign": "Web Design",
+      "Chatbot": "Chatbot",
+      "StrategicMarketing": "strategic Marketing",
+      "DigitalMarketing": "Digital Marketing"
     },
-    "DigitalMarketing": {
-      "title": "Digital Marketing & Advertising​",
-      "desc": "Ensure your business is set-up for digital success"
+    "OurServices": {
+      "title": "Our Integrated Services",
+      "Branding": {
+        "title": "Branding",
+        "desc": "Ensure your brand awareness and business growth"
+      },
+      "DigitalMarketing": {
+        "title": "Digital Marketing & Advertising​",
+        "desc": "Ensure your business is set-up for digital success"
+      },
+      "WebBased": {
+        "title": "Web-Based Services",
+        "desc": "Allow your business to select different web functions"
+      },
+      "ContentCreation": {
+        "title": "Content Creation",
+        "desc": "Event Represents Your Significant Investment, And We’ll Make Sure Yours Pays Off."
+      },
+      "EventOrganization": {
+        "title": "Event Organization",
+        "desc": "The best-practice approach to marketing"
+      },
+      "SeoServices​": {
+        "title": "SEO Services​",
+        "desc": "GET FOUND & drive qualified traffic to your website"
+      }
     },
-    "WebBased": {
-      "title": "Web-Based Services",
-      "desc": "Allow your business to select different web functions"
+    "SuccessStories": {
+      "title": "Success Stories",
+      "keys": {
+        "All": "All",
+        "WebDesign": "Web Design",
+        "SocialMedia": "Social Media",
+        "Branding": "Branding",
+        "EventOrganization": "EventOrganization",
+        "ShowMore": "Show More",
+        "ShowLess": "ShowLess"
+      }
     },
-    "ContentCreation": {
-      "title": "Content Creation",
-      "desc": "Event Represents Your Significant Investment, And We’ll Make Sure Yours Pays Off."
+    "SuccessPartnrts": {
+      "title": "Success Partners"
     },
-    "EventOrganization": {
-      "title": "Event Organization",
-      "desc": "The best-practice approach to marketing"
+    "Blog": {
+      "title": "Blog"
     },
-    "SeoServices​": {
-      "title": "SEO Services​",
-      "desc": "GET FOUND & drive qualified traffic to your website"
+    "ContactUS": {
+      "title": "ContactUs",
+      "contactData": {},
+      "Form": {
+        "label": {
+          "Name": "Name",
+          "Mobile": "Mobile",
+          "Email": "Email",
+          "SocialMedia": "SocialMedia",
+          "Address": "Address",
+          "Message": "Message"
+        },
+        "ُError": {
+          "Max": "The name field may not be greater than 15 characters",
+          "Required": "can not be empty"
+        },
+        "Send": "Send"
+      }
+    }
+  },
+  "AboutUs": {
+    "Title": "About <span class='mc'>Us</span>",
+    "OurStory": {
+      "Title": "Our Story",
+      "parg": {
+        "one": "<b>Our story began</b> when we decided to use our passion and vision, along with our work experience to share one idea and one dream",
+        "Tow": "<b>The Idea…</b> is very simple but unique, it is about creating a new combination of Marketing and Technology Solutions to help your business to grow smoothly.",
+        "Three": "<b>The Dream… </b>started by establishing SoluSpot, a startup company based in Cairo, Egypt willing to work globally."
+      }
+    },
+    "WhyUs": {
+      "Title": "Why Soluspot",
+      "parg": {
+        "one": "<strong>Serving Solutions simply…</strong>&nbsp;is our mission and passion.",
+        "Tow": "<strong>Your growth is our goal…</strong>working with you to understand your objectives and budget, tailoring our services to suit your needs.",
+        "Three": "<strong>Implementing our knowledge for your success…&nbsp;</strong>ensuring that every part of your marketing plan is connected together, mapped to your objectives and achieving your goals."
+      }
     }
   }
 }

@@ -1,25 +1,25 @@
 <template>
-<section id="SuccessStories">
-    <h3 class="SectionTitle text-center mt-5 mb-5">Success Stories</h3>
+<section id="SuccessStories" :dir="$t('dir')">
+    <h3 class="SectionTitle text-center mt-5 mb-5">{{ $t('Home.SuccessStories.title') }}</h3>
     <br /><br />
     <div class="container">
         <div uk-filter="target: .js-filter">
             <v-container grid-list-xl>
                 <v-layout wrap class="uk-subnav uk-subnav-pill">
                     <v-flex col>
-                        <v-btn class="w-btn w-100" uk-filter-control>All</v-btn>
+                        <v-btn class="w-btn w-100" uk-filter-control>{{ $t('Home.SuccessStories.keys.All') }}</v-btn>
                     </v-flex>
                     <v-flex col>
-                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='WebDesign']">Web Design</v-btn>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='WebDesign']">{{ $t('Home.SuccessStories.keys.WebDesign') }}</v-btn>
                     </v-flex>
                     <v-flex col>
-                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='SocialMedia']">Social Media</v-btn>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='SocialMedia']">{{ $t('Home.SuccessStories.keys.SocialMedia') }}</v-btn>
                     </v-flex>
                     <v-flex col>
-                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='Branding']">Branding</v-btn>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='Branding']">{{ $t('Home.SuccessStories.keys.Branding') }}</v-btn>
                     </v-flex>
                     <v-flex col>
-                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='EventOrganization']">Event Organization</v-btn>
+                        <v-btn class="w-btn  w-100" uk-filter-control="[data-filter='EventOrganization']">{{ $t('Home.SuccessStories.keys.EventOrganization') }}</v-btn>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -37,12 +37,12 @@
         <v-layout wrap class="uk-subnav uk-subnav-pill">
             <v-spacer></v-spacer>
             <v-flex md2>
-                <v-btn class="btn w-100" @click="itemsCount+= 3"><span v-if="$vuetify.breakpoint.smAndUp">Show More</span>
+                <v-btn class="btn w-100" @click="itemsCount+= 3"><span v-if="$vuetify.breakpoint.smAndUp">{{ $t('Home.SuccessStories.keys.ShowMore') }}</span>
                     <v-icon>mdi-plus</v-icon>
                 </v-btn>
             </v-flex>
             <v-flex md2>
-                <v-btn class="btn w-100" @click="itemsCount= 6"><span v-if="$vuetify.breakpoint.smAndUp">Show less</span>
+                <v-btn class="btn w-100" @click="itemsCount= 6"><span v-if="$vuetify.breakpoint.smAndUp">{{ $t('Home.SuccessStories.keys.ShowLess') }}</span>
                     <v-icon>mdi-minus</v-icon>
                 </v-btn>
             </v-flex>
