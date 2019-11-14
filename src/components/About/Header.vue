@@ -3,12 +3,12 @@
     <header id="header">
         <v-container grid-list-xl>
             <v-layout wrap>
-                <v-flex md6 xl12>
+                <v-flex md6 xs12>
                     <div class="SectionTitle">
                         <p v-html="$t('AboutUs.Title')"></p>
                     </div>
                 </v-flex>
-                <v-flex md6 xl12>
+                <v-flex md6 xs12>
                     <V-img width="90%" :src="require('../../assets/img/About/header-About.png')"></V-img>
                 </v-flex>
             </v-layout>
