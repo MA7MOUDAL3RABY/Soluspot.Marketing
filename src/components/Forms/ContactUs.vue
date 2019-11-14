@@ -4,7 +4,7 @@
     <v-text-field v-model="email" v-validate="'required|email'" :error-messages="errors.collect('email')" :label="$t('Home.ContactUS.Form.label.Email')" data-vv-name="email" required></v-text-field>
     <v-text-field v-model="phone" v-validate="'required|numeric|min:6|max:15'" :error-messages="errors.collect('requir')" :label="$t('Home.ContactUS.Form.label.Mobile')" data-vv-name="phone" required></v-text-field>
     <v-textarea v-model="textarea" v-validate="'required|alpha_num'" :error-messages="errors.collect('requir')" :label=" $t('Home.ContactUS.Form.label.Message') " data-vv-name="message" required></v-textarea>
-    <v-btn class="mr-4 btn" @click="submit"> {{ $t('Home.ContactUS.Form.Send')}} <v-icon small>mdi-send</v-icon> </v-btn>
+    <v-btn type="submit" class="mr-4 btn" @click="submit"> {{ $t('Home.ContactUS.Form.Send')}} <v-icon small>mdi-send</v-icon> </v-btn>
 </form>
 </template>
 
